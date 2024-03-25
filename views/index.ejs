@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webová anketa</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2>Anketa o autech</h2>
+    <form action="/submit" method="post" class="form-container">
+        <div>
+            <label for="like">Jak moc máte rád/a auta(1=nemám rád auta,5=auta mám rád).</label>
+            <input type="number" step="1" min="0" max="5" id="like" name="like" required>
+        </div>
+        
+        <div>
+            <label>Zvolte Vámi preferovaný typ motoru:</label>
+            <select id="engine" name="engine">
+                <option value="naftovy">Naftový</option>
+                <option value="benzinovy">Benzínový</option>
+                <option value="elektricky">Elektrický</option>
+                <option value="hybridni">Hybridní</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="using">Jak často používáte osobní automobil?</label>
+            <select id="use" name="use">
+                <option value="1">Nepoužívám vůbec.</option>
+                <option value="2">1-2x týdně.</option>
+                <option value="3">3-4x týdně.</option>
+                <option value="4">5-7x týdně.</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="roleModel">Napište značku oblíbené značky automobilu.</label>
+            <input type="text" id="roleModel" name="roleModel">
+        </div>
+        
+        <button type="submit">Odeslat odpovědi</button>
+    </form>
+</body>
+</html>
