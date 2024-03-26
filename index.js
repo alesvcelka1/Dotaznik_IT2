@@ -5,6 +5,14 @@ const fs = require("fs");
 
 const PORT = 3000;
 
+app.use('/public', express.static('public', {
+  setHeaders: (res, path, stat) => {
+    if (path.endsWith('.css')) {
+      res.set('Content-Type', 'text/css');
+    }
+  }
+}));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public")); // aktivace slozek css a img
 app.set("view engine", "ejs"); // nastavení EJS 

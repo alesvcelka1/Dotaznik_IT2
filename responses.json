@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1711450168210,
+    "timestamp": "2024-03-26T10:49:28.210Z",
+    "answers": {
+      "like": "3",
+      "engine": "naftovy",
+      "use": "4",
+      "roleModel": "Volkswagen"
+    }
+  },
+  {
+    "id": 1711450830048,
+    "timestamp": "2024-03-26T11:00:30.048Z",
+    "answers": {
+      "like": "4",
+      "engine": "naftovy",
+      "use": "2",
+      "roleModel": "Volkswagen"
+    }
+  },
+  {
+    "id": 1711451015682,
+    "timestamp": "2024-03-26T11:03:35.682Z",
+    "answers": {
+      "like": "1",
+      "engine": "Naftový",
+      "use": "Nepoužívám vůbec.",
+      "roleModel": ""
+    }
+  },
+  {
+    "id": 1711451883532,
+    "timestamp": "2024-03-26T11:18:03.532Z",
+    "answers": {
+      "like": "4",
+      "engine": "Naftový",
+      "use": "3-4x týdně.",
+      "roleModel": "Volkswagen"
+    }
+  },
+  {
+    "id": 1711452456944,
+    "timestamp": "2024-03-26T11:27:36.944Z",
+    "answers": {
+      "like": "3",
+      "engine": "Elektrický",
+      "use": "3-4x týdně.",
+      "roleModel": "Volkswagen",
+      "Model": "Golf 5 Gti"
+    }
+  }
+]
