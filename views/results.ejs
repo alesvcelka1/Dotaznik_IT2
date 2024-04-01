@@ -5,35 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Výsledky ankety</title>
     <link rel="stylesheet" href="../public/css/style.css">
+    <style>
+        .chart-container {
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        #myChart {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <table>
-        <tr>
-            <th>ID</th>
-            <th>Datum</th>
-            <th>Záliba</th>
-            <th>Typ mototu</th>
-            <th>Užívání automobilů</th>
-            <th>Oblíbená značka vozu</th>
-            <th>Oblíbený model vozu</th>
-        </tr>
-        <% responses.forEach(function(response) { 
-            const date = new Date(response.timestamp);
-            const dateString = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`;
-            const timeString = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)}`;
-        %>
             <tr>
-                <td><%= response.id %></td>
-                <td><%= dateString %></td>
-                <td><%= response.answers.like %></td>
-                <td><%= response.answers.engine %></td>
-                <td><%= response.answers.use %></td>
-                <td><%= response.answers.roleModel %></td>
-                <td><%= response.answers.Model %></td>
+                <th>ID</th>
+                <th>Datum</th>
+                <th>Záliba</th>
+                <th>Typ mototu</th>
+                <th>Užívání automobilů</th>
+                <th>Oblíbená značka vozu</th>
+                <th>Oblíbený model vozu</th>
             </tr>
-        <% }); %>
+            <% responses.forEach(function(response) { 
+                const date = new Date(response.timestamp);
+                const dateString = `${('0' + date.getDate()).slice(-2)}.${('0' + (date.getMonth() + 1)).slice(-2)}.${date.getFullYear()}`;
+                const timeString = `${('0' + date.getHours()).slice(-2)}:${('0' + date.getMinutes()).slice(-2)}:${('0' + date.getSeconds()).slice(-2)}`;
+            %>
+                <tr>
+                    <td><%= response.id %></td>
+                    <td><%= dateString %></td>
+                    <td><%= response.answers.like %></td>
+                    <td><%= response.answers.engine %></td>
+                    <td><%= response.answers.use %></td>
+                    <td><%= response.answers.roleModel %></td>
+                    <td><%= response.answers.Model %></td>
+                </tr>
+            <% }); %>
         </table>
-    </div>  
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const table = document.querySelector('table');
+        const rows = table.querySelectorAll('tr');
+        const data = [];
+        rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            const rowData = [];
+            cells.forEach(cell => {
+                rowData.push(cell.innerText);
+            });
+            data.push(rowData);
+        });
+
+        const labels = data.slice(1).map(row => row[1]); // Získání dat z tabulky pro popisky
+        const likesData = data.slice(1).map(row => row[2]); // Získání dat z tabulky pro zálibu
+        const engineData = data.slice(1).map(row => row[3]); // Získání dat z tabulky pro typ mototu
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'pie', // Zvolení typu grafu - koláčový graf
+            data: {
+                labels: labels, // Nastavení popisků
+                datasets: [{
+                    label: 'Záliba vs Typ mototu', // Název datasetu
+                    data: likesData, // Nastavení dat pro zálibu
+                    backgroundColor: [ // Barvy pro jednotlivé segmenty
+                        'rgba(255, 99, 132, 0.5)', // Červená s průhledností 0.5
+                        'rgba(54, 162, 235, 0.5)', // Modrá s průhledností 0.5
+                        'rgba(255, 206, 86, 0.5)', // Žlutá s průhledností 0.5
+                        'rgba(75, 192, 192, 0.5)', // Tyrkysová s průhledností 0.5
+                        'rgba(153, 102, 255, 0.5)', // Fialová s průhledností 0.5
+                        'rgba(255, 159, 64, 0.5)' // Oranžová s průhledností 0.5
+                    ],
+                    borderWidth: 1 // Šířka hranice segmentů
+                }]
+            },
+            options: {
+                maintainAspectRatio: false // Nastavení, zda se má zachovat poměr stran grafu
+            }
+        });
+    </script>
 </body>
 </html>
