@@ -49,5 +49,82 @@
       "roleModel": "Volkswagen",
       "Model": "Golf 5 Gti"
     }
+  },
+  {
+    "id": 1712051121891,
+    "timestamp": "2024-04-02T09:45:21.891Z",
+    "answers": {
+      "like": "2",
+      "engine": "Hybridní",
+      "use": "5-7x týdně.",
+      "roleModel": "Porsche",
+      "Model": "911 turbo s"
+    }
+  },
+  {
+    "id": 1712052128034,
+    "timestamp": "2024-04-02T10:02:08.034Z",
+    "answers": {
+      "like": "3",
+      "engine": "Elektrický",
+      "use": "1-2x týdně.",
+      "roleModel": "Renault",
+      "Model": "Clio"
+    }
+  },
+  {
+    "id": 1712052588035,
+    "timestamp": "2024-04-02T10:09:48.035Z",
+    "answers": {
+      "like": "1",
+      "engine": "Benzínový",
+      "use": "3-4x týdně.",
+      "roleModel": "BMW",
+      "Model": "M5"
+    }
+  },
+  {
+    "id": 1712052694831,
+    "timestamp": "2024-04-02T10:11:34.831Z",
+    "answers": {
+      "like": "3",
+      "engine": "Naftový",
+      "use": "1-2x týdně.",
+      "roleModel": "",
+      "Model": ""
+    }
+  },
+  {
+    "id": 1712052818718,
+    "timestamp": "2024-04-02T10:13:38.718Z",
+    "answers": {
+      "like": "3",
+      "engine": "Naftový",
+      "use": "1-2x týdně.",
+      "roleModel": "",
+      "Model": ""
+    }
+  },
+  {
+    "id": 1712053671335,
+    "timestamp": "2024-04-02T10:27:51.335Z",
+    "answers": {
+      "like": "4",
+      "engine": "Benzínový",
+      "use": "5-7x týdně.",
+      "roleModel": "Mercedes-Benz",
+      "Model": "G class"
+    }
+  },
+  {
+    "id": 1712054915090,
+    "timestamp": "2024-04-02T10:48:35.090Z",
+    "answers": {
+      "like": "4",
+      "engine": "Elektrický",
+      "use": "3-4x týdně.",
+      "roleModel": "Dacia",
+      "Model": "Duster"
+    }
   }
 ]
