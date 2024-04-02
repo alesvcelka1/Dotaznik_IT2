@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Světle šedá */
+    background-color: #f5f5f5; 
 }
 
 h2 {
@@ -13,7 +13,7 @@ h2 {
 .form-container {
     max-width: 500px;
     margin: 0 auto;
-    background-color: #fff; /* Bílá */
+    background-color: #fff; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -33,7 +33,7 @@ select,
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc; /* Světle šedá */
+    border: 1px solid #ccc; 
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -41,8 +41,8 @@ input[type="text"] {
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #555; /* Tmavě šedá */
-    color: #fff; /* Bílá */
+    background-color: #555; 
+    color: #fff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -50,14 +50,14 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: purple; /* Fialová */
+    background-color: purple; 
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff; /* Bílá */
+    background-color: #fff; 
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -70,15 +70,15 @@ table {
 th, td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd; /* Světle šedá */
+    border-bottom: 1px solid #ddd; 
 }
 
 th {
-    background-color: #8a2be2; /* Fialová */
+    background-color: #8a2be2; 
     font-weight: bold;
-    color: #fff; /* Bílá */
+    color: #fff; 
 }
 
 tr:hover {
-    background-color: #f9f9f9; /* Světle šedá */
+    background-color: #f9f9f9;
 }
